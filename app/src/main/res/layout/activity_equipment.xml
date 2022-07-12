@@ -86,7 +86,8 @@
                 android:layout_marginStart="75dp"
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
-                android:text="0" />
+                android:text="0"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -110,7 +111,8 @@
                 android:layout_marginStart="75dp"
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
-                android:text="0" />
+                android:text="0"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -134,7 +136,8 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
-                android:text="0" />
+                android:text="0"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -158,7 +161,8 @@
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_weight="1"
-                android:text="0" />
+                android:text="0"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

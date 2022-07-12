@@ -97,8 +97,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     }
 
 
-    String strC = mDBHelper.COLUMN_DRIVENAME;
-
+    // Метод для получения названий колонок
     public String getColumn(int i){
         List<String> strCol = new ArrayList<>();
         strCol.add(mDBHelper.COLUMN_DRIVENAME);
@@ -109,6 +108,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     }
 
 
+    // Достаём данные из курсора
     @SuppressLint("Range")
     void logCursC(Cursor c, int i, TextView tv) {
 
