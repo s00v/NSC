@@ -21,6 +21,8 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Equipment extends AppCompatActivity implements View.OnClickListener {
 
@@ -97,17 +99,27 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
 
     String strC = mDBHelper.COLUMN_DRIVENAME;
 
+    public String getColumn(int i){
+        List<String> strCol = new ArrayList<>();
+        strCol.add(mDBHelper.COLUMN_DRIVENAME);
+        strCol.add(mDBHelper.COLUMN_DRIVENUMBER);
+        strCol.add(mDBHelper.COLUMN_LEADINGPULLEY);
+        strCol.add(mDBHelper.COLUMN_SLAVEPULLEY);
+        return strCol.get(i);
+    }
+
+
     @SuppressLint("Range")
-    void logCursC(Cursor c) {
+    void logCursC(Cursor c, int i, TextView tv) {
 
         if (c != null) {
             if (c.moveToFirst()) {
                 String str;
-                str = c.getString(c.getColumnIndex(strC));
-                dvNameF.setText(str);
+                str = c.getString(c.getColumnIndex(getColumn(i)));
+                tv.setText(str);
             }
         } else
-            dvNameF.setText("null");
+            tv.setText("null");
     }
 
     @SuppressLint("Range")
@@ -131,8 +143,10 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
 //        userCursorArr.moveToFirst();
 
         userC = mDb.query(mDBHelper.TABLE_DRIVE, null, null, null, null, null, null);
-        logCursC(userC);
-
+        logCursC(userC, 0, dvNameF);
+        logCursC(userC, 1, dvNumF);
+        logCursC(userC, 2, dvLeadF);
+        logCursC(userC, 3, dvSlaveF);
 
 
 
