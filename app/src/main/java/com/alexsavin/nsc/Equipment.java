@@ -95,17 +95,15 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     }
 
 
-
+    String strC = mDBHelper.COLUMN_DRIVENAME;
 
     @SuppressLint("Range")
     void logCursC(Cursor c) {
-        String[] strC = new String[]{"COLUMN_DRIVENAME"};
+
         if (c != null) {
             if (c.moveToFirst()) {
                 String str;
-                str = "";
-//                str = str.concat(c.getColumnName(1));
-                str = c.getString(c.getColumnIndex(mDBHelper.COLUMN_DRIVENAME));
+                str = c.getString(c.getColumnIndex(strC));
                 dvNameF.setText(str);
             }
         } else
