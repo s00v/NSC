@@ -128,55 +128,18 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         super.onResume();
         mDb = mDBHelper.open();
 
-
-
-
-
-
-        userCursor = mDb.rawQuery("select * from " + mDBHelper.TABLE + " where " + mDBHelper.COLUMN_ID + " = 2 ", null);
-
-        String[] headers = new String[]{DatabaseHelper.COLUMN_STARTDATA, COLUMN_NUMBER};
-        userAdapter = new SimpleCursorAdapter(this, android.R.layout.two_line_list_item,
-                userCursor, headers, new int[]{android.R.id.text1, android.R.id.text2}, 0);
-        userList.setAdapter(userAdapter);
-
-//        userCursorArr.moveToFirst();
+//        userCursor = mDb.rawQuery("select * from " + mDBHelper.TABLE + " where " + mDBHelper.COLUMN_ID + " = 2 ", null);
+//
+//        String[] headers = new String[]{DatabaseHelper.COLUMN_STARTDATA, COLUMN_NUMBER};
+//        userAdapter = new SimpleCursorAdapter(this, android.R.layout.two_line_list_item,
+//                userCursor, headers, new int[]{android.R.id.text1, android.R.id.text2}, 0);
+//        userList.setAdapter(userAdapter);
 
         userC = mDb.query(mDBHelper.TABLE_DRIVE, null, null, null, null, null, null);
         logCursC(userC, 0, dvNameF);
         logCursC(userC, 1, dvNumF);
         logCursC(userC, 2, dvLeadF);
         logCursC(userC, 3, dvSlaveF);
-
-
-
-
-
-//        userCursorArr = mDb.rawQuery("select * from " + mDBHelper.TABLE_DRIVE + " where " + mDBHelper.COLUMN_DRIVEID + " = 1 ", null);
-//        String[] tables = new String[]{DatabaseHelper.COLUMN_DRIVENAME, DatabaseHelper.COLUMN_DRIVENUMBER};
-//        userAdapterD = new SimpleCursorAdapter(this, android.R.layout.layoutdrive,
-//                userCursor, tables, new int[]{android.R.id.text3, android.R.id.text4}, 0);
-
-//        userCursorArr = mDb.rawQuery("select * from " + mDBHelper.TABLE_DRIVE + " where " + mDBHelper.COLUMN_DRIVEID + " = 1 ", null);
-//        userCursorArr.getColumnCount();
-//        int pos = userCursorArr.getPosition();
-
-
-
-
-
-
-//        String drNumN = userCursorArr.getString(userCursorArr.getColumnIndex(mDBHelper.COLUMN_DRIVEID));
-//        userCursorArr.moveToNext();
-
-//        userCursorArr = mDb.query("TABLE_DRIVE", tables, null, null, null, null, null );
-//        userCursorArr = mDb.query("TABLE_DRIVE", tables, "_id = ?", new String[]{Integer.toString(1)}, null, null, null );
-//        dvNameF.setText(userCursorArr.getString(0));
-//        dvNumF.setText(userCursorArr.getString(1));
-//        dvNumF.setText("");
-
-
-
 
 
     }
