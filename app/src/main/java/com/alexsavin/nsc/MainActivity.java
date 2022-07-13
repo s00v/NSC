@@ -3,7 +3,9 @@ package com.alexsavin.nsc;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,10 +15,17 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
+
+    String oilWellNum;
+    Cursor cursor;
+    Button tv;
+    TextView tvc;
 
     Button but201;
     Button but407;
@@ -33,10 +42,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView textV;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mDBHelper = new DatabaseHelper(getApplicationContext());
+        mDBHelper.create_db();
+        mDb = mDBHelper.open();
 
         but201 = (Button) findViewById(R.id.but201);
         but407 = (Button) findViewById(R.id.but407);
@@ -53,6 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //        textV = (TextView) findViewById(R.id.textV);
 
+
+
+
+
         but201.setOnClickListener(this);
         but407.setOnClickListener(this);
         but608.setOnClickListener(this);
@@ -66,10 +85,38 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         but809.setOnClickListener(this);
         but907.setOnClickListener(this);
 
+        cursor = mDb.query(mDBHelper.TABLE, null, null, null, null, null, null);
+
+        tvc = findViewById(R.id.tvc);
+        logCursC(cursor);
+
+
     }
+
+
+
+        @SuppressLint("Range")
+    void logCursC(Cursor c) {
+
+
+        if (c != null) {
+            if (c.moveToFirst()) {
+                String str;
+                str = c.getString(c.getColumnIndex(mDBHelper.COLUMN_NUMBER));
+                tvc.setText(str);
+            }
+        } else
+            tvc.setText("null");
+    }
+
+
+
 
     @Override
     public void onClick(View v) {
+
+
+
         Intent intent = new Intent(this, CommonOilData.class);
         switch (v.getId()) {
             case R.id.but201:
@@ -118,6 +165,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //
 //
 //    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

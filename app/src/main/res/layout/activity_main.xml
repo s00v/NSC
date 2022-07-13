@@ -33,7 +33,7 @@
                 android:layout_height="60dp"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
-                android:text="201"
+                android:text="0"
                 android:textSize="26sp"
                 app:cornerRadius="0dp" />
 
@@ -372,8 +372,14 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/tvc"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Text" />
 
-        </LinearLayout>
+
+    </LinearLayout>
 
 
 
