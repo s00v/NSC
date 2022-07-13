@@ -92,8 +92,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cursor = mDb.query(mDBHelper.TABLE, null, null, null, null, null, null);
 
         tvc = findViewById(R.id.tvc);
-        logCursC(cursor);
 
+        logCursC(cursor);
         multiButtons(cursor);
 
 
@@ -104,19 +104,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(c.moveToFirst()) {
             do {
 
-                createButton();
+                createButton(c);
 
             }
             while (c.moveToNext());
         }
     }
 
-    void createButton(){
+    void createButton(Cursor cursor){
 
         LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
         wrapContent, wrapContent);
         Button btnNew = new Button(this);
-        btnNew.setText("111");
+        btnNew.setText(tvc.getText());
 //        btnNew.setId(145);
         LinearDin.addView(btnNew, lParams);
         lParams.gravity = Gravity.CENTER_HORIZONTAL;
@@ -128,13 +128,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         if (c != null) {
+
             if (c.moveToFirst()) {
-                String str;
+                String str = "";
                 str = c.getString(c.getColumnIndex(mDBHelper.COLUMN_NUMBER));
                 tvc.setText(str);
             }
         } else
             tvc.setText("null");
+//        return str;
     }
 
 
