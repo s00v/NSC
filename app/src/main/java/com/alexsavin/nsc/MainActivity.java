@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,6 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private DatabaseHelper mDBHelper;
+    private SQLiteDatabase mDb;
 
     Button but201;
     Button but407;
@@ -107,6 +111,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        mDb = mDBHelper.open();
+//
+//
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -125,5 +136,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
     }
+
+//    @Override
+//    public void onDestroy(){
+//        super.onDestroy();
+//        mDb.close();
+//
+//    }
+
 
 }

@@ -70,35 +70,35 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         mDBHelper = new DatabaseHelper(getApplicationContext());
         mDBHelper.create_db();
 
-        userList = findViewById(R.id.list);
-        userList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(getApplicationContext(), UserActivity.class);
-                intent.putExtra("_id",l);
-                startActivity(intent);
-            }
-        });
+//        userList = findViewById(R.id.list);
+//        userList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Intent intent = new Intent(getApplicationContext(), UserActivity.class);
+//                intent.putExtra("_id",l);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 
 
-    @SuppressLint("Range")
-    void logCurs(Cursor c) {
-        if (c != null) {
-            if (c.moveToFirst()) {
-                String str;
-                do {
-                    str = "";
-                    for (String cn : c.getColumnNames()) {
-                        str = str.concat(cn + " = " + c.getString(c.getColumnIndex(cn)) + "; ");
-                    }
-                    dvNameF.setText(str);
-                } while (c.moveToNext());
-            }
-        } else
-            dvNameF.setText("null");
-    }
+//    @SuppressLint("Range")
+//    void logCurs(Cursor c) {
+//        if (c != null) {
+//            if (c.moveToFirst()) {
+//                String str;
+//                do {
+//                    str = "";
+//                    for (String cn : c.getColumnNames()) {
+//                        str = str.concat(cn + " = " + c.getString(c.getColumnIndex(cn)) + "; ");
+//                    }
+//                    dvNameF.setText(str);
+//                } while (c.moveToNext());
+//            }
+//        } else
+//            dvNameF.setText("null");
+//    }
 
 
     List<String> tableDataEngine = new ArrayList<>();
@@ -120,15 +120,6 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
 
     // Метод для получения названий колонок
     public String getColumn(List<String> strCol, int i){
-//        List<String> strCol = new ArrayList<>();
-//        strCol.get(0);
-//        strCol.get(1);
-//        strCol.get(2);
-//        strCol.get(3);
-        return strCol.get(i);
-    }
-
-    public int getColumnInt(List<Integer> strCol, int i){
         return strCol.get(i);
     }
 
