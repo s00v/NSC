@@ -30,6 +30,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     ListView userListD;
     Cursor userCursor;
     Cursor userC;
+    Cursor userCC;
     SimpleCursorAdapter userAdapter;
     SimpleCursorAdapter userAdapterD;
     private DatabaseHelper mDBHelper;
@@ -43,6 +44,8 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     ContentValues cv1;
     Layout layoutdrive;
 
+    Cursor c;
+    String tableName;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -71,12 +74,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
             }
         });
 
-
-
-
     }
-
-
 
 
     @SuppressLint("Range")
@@ -107,6 +105,11 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         return strCol.get(i);
     }
 
+    // Получаем таблицу из базы
+    public Cursor getTableDB(Cursor c, String tableName){
+        c = mDb.query(tableName, null, null, null, null, null, null);
+        return c;
+    }
 
     // Достаём данные из курсора
     @SuppressLint("Range")
@@ -135,11 +138,13 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
 //                userCursor, headers, new int[]{android.R.id.text1, android.R.id.text2}, 0);
 //        userList.setAdapter(userAdapter);
 
-        userC = mDb.query(mDBHelper.TABLE_DRIVE, null, null, null, null, null, null);
-        logCursC(userC, 0, dvNameF);
-        logCursC(userC, 1, dvNumF);
-        logCursC(userC, 2, dvLeadF);
-        logCursC(userC, 3, dvSlaveF);
+//        userC = mDb.query(mDBHelper.TABLE_DRIVE, null, null, null, null, null, null);
+//        userCC = mDb.query(null, null, null, null, null, null, null);
+
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 0, dvNameF);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 1, dvNumF);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 2, dvLeadF);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 3, dvSlaveF);
 
 
     }
@@ -156,6 +161,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         mDb.close();
         userCursor.close();
         userC.close();
+        userCC.close();
     }
 
 
