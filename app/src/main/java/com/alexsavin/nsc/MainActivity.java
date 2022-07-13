@@ -8,10 +8,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
+
+    int wrapContent = LinearLayout.LayoutParams.WRAP_CONTENT;
+    LinearLayout LinearDin;
 
     String oilWellNum;
     Cursor cursor;
@@ -49,6 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        LinearDin = (LinearLayout) findViewById(R.id.LinearDin);
+
         mDBHelper = new DatabaseHelper(getApplicationContext());
         mDBHelper.create_db();
         mDb = mDBHelper.open();
@@ -69,9 +76,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        textV = (TextView) findViewById(R.id.textV);
 
 
-
-
-
         but201.setOnClickListener(this);
         but407.setOnClickListener(this);
         but608.setOnClickListener(this);
@@ -90,6 +94,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvc = findViewById(R.id.tvc);
         logCursC(cursor);
 
+        LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
+                wrapContent, wrapContent);
+
+        Button btnNew = new Button(this);
+        btnNew.setText("111");
+        LinearDin.addView(btnNew, lParams);
+        lParams.gravity = Gravity.CENTER_HORIZONTAL;
 
     }
 
