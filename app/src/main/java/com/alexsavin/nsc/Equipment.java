@@ -39,6 +39,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     TextView dvNumF;
     TextView dvLeadF;
     TextView dvSlaveF;
+    TextView сvCurrDriveD, cvCurrDrNumD, cvTurnD, cvTurn50D;
     String drNumN;
 
     ContentValues cv1;
@@ -58,6 +59,11 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         dvNumF = findViewById(R.id.dvNumF);
         dvLeadF = findViewById(R.id.dvLeadF);
         dvSlaveF = findViewById(R.id.dvSlaveF);
+
+        сvCurrDriveD = findViewById(R.id.сvCurrDriveD);
+        cvCurrDrNumD = findViewById(R.id.cvCurrDrNumD);
+        cvTurnD = findViewById(R.id.cvTurnD);
+        cvTurn50D = findViewById(R.id.cvTurn50D);
 
         dvNameF.setText("");
 
@@ -95,13 +101,34 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     }
 
 
+    List<String> tableDataEngine = new ArrayList<>();
+    {
+        tableDataEngine.add(mDBHelper.COLUMN_ENGINENAME);
+        tableDataEngine.add(mDBHelper.COLUMN_ENGNUMBER);
+        tableDataEngine.add(mDBHelper.COLUMN_TURNMIN);
+        tableDataEngine.add(mDBHelper.COLUMN_TURNGC);
+    }
+
+    List<String> tableDrive = new ArrayList<>();
+    {
+        tableDrive.add(mDBHelper.COLUMN_DRIVENAME);
+        tableDrive.add(mDBHelper.COLUMN_DRIVENUMBER);
+        tableDrive.add(mDBHelper.COLUMN_LEADINGPULLEY);
+        tableDrive.add(mDBHelper.COLUMN_SLAVEPULLEY);
+    }
+
+
     // Метод для получения названий колонок
-    public String getColumn(int i){
-        List<String> strCol = new ArrayList<>();
-        strCol.add(mDBHelper.COLUMN_DRIVENAME);
-        strCol.add(mDBHelper.COLUMN_DRIVENUMBER);
-        strCol.add(mDBHelper.COLUMN_LEADINGPULLEY);
-        strCol.add(mDBHelper.COLUMN_SLAVEPULLEY);
+    public String getColumn(List<String> strCol, int i){
+//        List<String> strCol = new ArrayList<>();
+//        strCol.get(0);
+//        strCol.get(1);
+//        strCol.get(2);
+//        strCol.get(3);
+        return strCol.get(i);
+    }
+
+    public int getColumnInt(List<Integer> strCol, int i){
         return strCol.get(i);
     }
 
@@ -113,12 +140,12 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
 
     // Достаём данные из курсора
     @SuppressLint("Range")
-    void logCursC(Cursor c, int i, TextView tv) {
+    void logCursC(Cursor c, int i, TextView tv, List tableDB) {
 
         if (c != null) {
             if (c.moveToFirst()) {
                 String str;
-                str = c.getString(c.getColumnIndex(getColumn(i)));
+                str = c.getString(c.getColumnIndex(getColumn(tableDB, i)));
                 tv.setText(str);
             }
         } else
@@ -141,10 +168,15 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
 //        userC = mDb.query(mDBHelper.TABLE_DRIVE, null, null, null, null, null, null);
 //        userCC = mDb.query(null, null, null, null, null, null, null);
 
-        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 0, dvNameF);
-        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 1, dvNumF);
-        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 2, dvLeadF);
-        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 3, dvSlaveF);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 0, dvNameF, tableDrive);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 1, dvNumF, tableDrive);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 2, dvLeadF, tableDrive);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_DRIVE), 3, dvSlaveF, tableDrive);
+
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ENGINE), 0, сvCurrDriveD, tableDataEngine);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ENGINE), 1, cvCurrDrNumD, tableDataEngine);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ENGINE), 2, cvTurnD, tableDataEngine);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ENGINE), 3, cvTurn50D, tableDataEngine);
 
 
     }
