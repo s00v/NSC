@@ -94,16 +94,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tvc = findViewById(R.id.tvc);
         logCursC(cursor);
 
-        LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
-                wrapContent, wrapContent);
+        multiButtons(cursor);
 
-        Button btnNew = new Button(this);
-        btnNew.setText("111");
-        LinearDin.addView(btnNew, lParams);
-        lParams.gravity = Gravity.CENTER_HORIZONTAL;
+
 
     }
 
+    void multiButtons(Cursor c){
+        if(c.moveToFirst()) {
+            do {
+
+                createButton();
+
+            }
+            while (c.moveToNext());
+        }
+    }
+
+    void createButton(){
+
+        LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
+        wrapContent, wrapContent);
+        Button btnNew = new Button(this);
+        btnNew.setText("111");
+//        btnNew.setId(145);
+        LinearDin.addView(btnNew, lParams);
+        lParams.gravity = Gravity.CENTER_HORIZONTAL;
+    }
 
 
         @SuppressLint("Range")
