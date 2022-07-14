@@ -114,33 +114,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    @SuppressLint("Range")
+    @SuppressLint({"Range", "ResourceAsColor"})
     void createButton(Cursor c){
         String str = "";
         LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
-        900, 200);
+        800, 200);
         Button btnNew = new Button(this);
         btnNew.setPadding(5, 5, 5, 5);
 
-//        btnNew.setScaleX(3);
-//        btnNew.setScaleY(2);
+        btnNew.setBackgroundColor(R.color.black_grey_bgrnd);
+        btnNew.setTextColor(R.color.grey_but_btn);
         btnNew.setHeight(60);
         btnNew.setWidth(180);
         btnNew.setTextSize(60);
         btnNew.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
         str = c.getString(c.getColumnIndex(mDBHelper.COLUMN_NUMBER));
         btnNew.setText(str);
-
-//        btnNew.setMinimumWidth(140);
+        btnNew.setOnClickListener(this);
 
         btnNew.setId(Integer.parseInt(str));
 //        Button btnnn = (Button) findViewById(R.id.(btnNew.getId()));
 
-
+    LinearDin.setBackgroundColor(R.color.black);
         LinearDin.addView(btnNew, lParams);
         lParams.gravity = Gravity.CENTER_HORIZONTAL;
-
-//        lParams.weight = LinearDin.getWeightSum();
 
     }
 
@@ -171,6 +168,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Intent intent = new Intent(this, CommonOilData.class);
         switch (v.getId()) {
+
+
             case R.id.but201:
                 startActivity(intent);
                 break;
