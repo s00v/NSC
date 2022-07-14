@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int wrapContent = LinearLayout.LayoutParams.WRAP_CONTENT;
     int matchParent = LinearLayout.LayoutParams.MATCH_PARENT;
     LinearLayout LinearDin;
+    LinearLayout linearOne;
+
 
     String oilWellNum;
     Cursor cursor;
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         LinearDin = (LinearLayout) findViewById(R.id.LinearDin);
+        linearOne = (LinearLayout) findViewById(R.id.linearOne);
 
         mDBHelper = new DatabaseHelper(getApplicationContext());
         mDBHelper.create_db();
@@ -96,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         tvc = findViewById(R.id.tvc);
 
-        logCursC(cursor);
+//        logCursC(cursor);
         multiButtons(cursor);
 
 
@@ -118,12 +121,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     void createButton(Cursor c){
         String str = "";
         LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
-        800, 200);
+        matchParent, 200);
         Button btnNew = new Button(this);
         btnNew.setPadding(5, 5, 5, 5);
 
-        btnNew.setBackgroundColor(R.color.black_grey_bgrnd);
-        btnNew.setTextColor(R.color.grey_but_btn);
+//        btnNew.setBackgroundColor(R.color.black_grey_bgrnd);
+//        btnNew.setTextColor(R.color.grey_but_btn);
+        btnNew.setBackgroundColor(R.color.black);
+        btnNew.requestLayout();
         btnNew.setHeight(60);
         btnNew.setWidth(180);
         btnNew.setTextSize(60);
@@ -135,28 +140,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNew.setId(Integer.parseInt(str));
 //        Button btnnn = (Button) findViewById(R.id.(btnNew.getId()));
 
-    LinearDin.setBackgroundColor(R.color.black);
-        LinearDin.addView(btnNew, lParams);
+//    LinearDin.setBackgroundColor(R.color.black);
+        linearOne.setPadding(30,10,10,30);
+        linearOne.addView(btnNew, lParams);
+//        LinearDin.addView(btnNew, lParams);
+//        linearOne.setLayoutParams(lParams);
         lParams.gravity = Gravity.CENTER_HORIZONTAL;
 
     }
 
 
-        @SuppressLint("Range")
-    void logCursC(Cursor c) {
+//        @SuppressLint("Range")
+//    void logCursC(Cursor c) {
 
 
-        if (c != null) {
-
-            if (c.moveToFirst()) {
-                String str = "";
-                str = c.getString(c.getColumnIndex(mDBHelper.COLUMN_NUMBER));
-                tvc.setText(str);
-            }
-        } else
-            tvc.setText("null");
-//        return str;
-    }
+//        if (c != null) {
+//
+//            if (c.moveToFirst()) {
+//                String str = "";
+//                str = c.getString(c.getColumnIndex(mDBHelper.COLUMN_NUMBER));
+//                tvc.setText(str);
+//            }
+//        } else
+//            tvc.setText("null");
+////        return str;
+//    }
 
 
 

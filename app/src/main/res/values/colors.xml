@@ -3,8 +3,8 @@
 
     <color name="black_grey_bgrnd">#1A1A1A</color>
     <color name="grey_but_btn">#B1B1B1</color>
-    <color name="grey_but_right">#C4C4C4</color>
-    <color name="grey_but_common">#EAEAEA</color>
+    <color name="grey_but_right">#000000</color>
+    <color name="grey_but_common">#000000</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
