@@ -359,17 +359,17 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/tvc"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Text" />
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvc"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="50dp"-->
+        <!--            android:text="Text" />-->
 
-        <LinearLayout
-            android:id="@+id/LinearDin"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"></LinearLayout>
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/LinearDin"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:orientation="vertical"></LinearLayout>-->
 
 
     </LinearLayout>

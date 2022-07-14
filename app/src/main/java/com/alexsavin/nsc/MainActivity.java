@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     int wrapContent = LinearLayout.LayoutParams.WRAP_CONTENT;
     int matchParent = LinearLayout.LayoutParams.MATCH_PARENT;
+
     LinearLayout LinearDin;
     LinearLayout linearOne;
-
 
     String oilWellNum;
     Cursor cursor;
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LinearDin = (LinearLayout) findViewById(R.id.LinearDin);
+//        LinearDin = (LinearLayout) findViewById(R.id.LinearDin);
         linearOne = (LinearLayout) findViewById(R.id.linearOne);
 
         mDBHelper = new DatabaseHelper(getApplicationContext());
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         cursor = mDb.query(mDBHelper.TABLE, null, null, null, null, null, null);
 
-        tvc = findViewById(R.id.tvc);
+//        tvc = findViewById(R.id.tvc);
 
 //        logCursC(cursor);
         multiButtons(cursor);
@@ -119,14 +119,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @SuppressLint({"Range", "ResourceAsColor"})
     void createButton(Cursor c){
+
         String str = "";
         LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
-        matchParent, 200);
+                matchParent, 200);
         Button btnNew = new Button(this);
         btnNew.setPadding(5, 5, 5, 5);
 
 //        btnNew.setBackgroundColor(R.color.black_grey_bgrnd);
 //        btnNew.setTextColor(R.color.grey_but_btn);
+
         btnNew.setBackgroundColor(R.color.black);
         btnNew.requestLayout();
         btnNew.setHeight(60);
