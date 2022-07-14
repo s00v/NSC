@@ -1,5 +1,7 @@
 package com.alexsavin.nsc;
 
+import static android.view.Gravity.LEFT;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private SQLiteDatabase mDb;
 
     int wrapContent = LinearLayout.LayoutParams.WRAP_CONTENT;
+    int matchParent = LinearLayout.LayoutParams.MATCH_PARENT;
     LinearLayout LinearDin;
 
     String oilWellNum;
@@ -111,15 +114,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    void createButton(Cursor cursor){
-
+    @SuppressLint("Range")
+    void createButton(Cursor c){
+        String str = "";
         LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
-        wrapContent, wrapContent);
+        900, 200);
         Button btnNew = new Button(this);
-        btnNew.setText(tvc.getText());
-//        btnNew.setId(145);
+        btnNew.setPadding(5, 5, 5, 5);
+
+//        btnNew.setScaleX(3);
+//        btnNew.setScaleY(2);
+        btnNew.setHeight(60);
+        btnNew.setWidth(180);
+        btnNew.setTextSize(60);
+        btnNew.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
+        str = c.getString(c.getColumnIndex(mDBHelper.COLUMN_NUMBER));
+        btnNew.setText(str);
+
+//        btnNew.setMinimumWidth(140);
+
+        btnNew.setId(Integer.parseInt(str));
+//        Button btnnn = (Button) findViewById(R.id.(btnNew.getId()));
+
+
         LinearDin.addView(btnNew, lParams);
         lParams.gravity = Gravity.CENTER_HORIZONTAL;
+
+//        lParams.weight = LinearDin.getWeightSum();
+
     }
 
 
