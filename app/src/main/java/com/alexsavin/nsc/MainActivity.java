@@ -95,12 +95,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         but809.setOnClickListener(this);
         but907.setOnClickListener(this);
 
-        cursor = mDb.query(mDBHelper.TABLE, null, null, null, null, null, null);
+//        cursor = mDb.query(mDBHelper.TABLE, null, null, null, null, null, null);
 
 //        tvc = findViewById(R.id.tvc);
 
 //        logCursC(cursor);
-        multiButtons(cursor);
+//        multiButtons(cursor);
 
 
 
