@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     LinearLayout LinearDin;
     LinearLayout linearOne;
+    LinearLayout lt201;
 
     String oilWellNum;
     Cursor cursor;
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mDBHelper.create_db();
         mDb = mDBHelper.open();
 
-        but201 = (Button) findViewById(R.id.but201);
+        lt201 = (LinearLayout) findViewById(R.id.lt201);
         but407 = (Button) findViewById(R.id.but407);
         but608 = (Button) findViewById(R.id.but608);
         but707 = (Button) findViewById(R.id.but707);
@@ -81,8 +82,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //        textV = (TextView) findViewById(R.id.textV);
 
-
-        but201.setOnClickListener(this);
+        lt201.setOnClickListener(this);
+//        but201.setOnClickListener(this);
         but407.setOnClickListener(this);
         but608.setOnClickListener(this);
         but707.setOnClickListener(this);
@@ -180,7 +181,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
 
 
-            case R.id.but201:
+            case R.id.lt201:
                 startActivity(intent);
                 break;
             case R.id.but407:

@@ -16,9 +16,4 @@ public class MainButtons {
     private SQLiteDatabase mDb;
 
 
-
-
-
-
-
 }

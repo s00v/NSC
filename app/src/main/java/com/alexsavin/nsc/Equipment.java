@@ -26,8 +26,7 @@ import java.util.List;
 
 public class Equipment extends AppCompatActivity implements View.OnClickListener {
 
-    ListView userList;
-    ListView userListD;
+
     Cursor userCursor;
     Cursor userC;
     Cursor userCC;
@@ -43,7 +42,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     String drNumN;
 
     ContentValues cv1;
-    Layout layoutdrive;
+
 
     Cursor c;
     String tableName;
@@ -54,7 +53,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_equipment);
 
-//        layoutdrive = findViewById(R.id.layoutdrive);
+
         dvNameF = findViewById(R.id.dvNameF);
         dvNumF = findViewById(R.id.dvNumF);
         dvLeadF = findViewById(R.id.dvLeadF);
@@ -131,7 +130,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
 
     // Достаём данные из курсора
     @SuppressLint("Range")
-    void logCursC(Cursor c, int i, TextView tv, List tableDB) {
+    void logCursC(Cursor c, int i, TextView tv, List<String> tableDB) {
 
         if (c != null) {
             if (c.moveToFirst()) {
