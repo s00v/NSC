@@ -361,10 +361,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="290dp"
+            android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="14dp"
+            android:layout_weight="4"
             android:gravity="bottom"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -373,20 +374,21 @@
             <TextView
 
                 android:id="@+id/tvNum201"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
                 android:text="370"
+                android:textAlignment="viewStart"
                 android:textColor="#B3B3B3"
                 android:textSize="48sp"
                 android:textStyle="bold"
-                android:layout_gravity="bottom"
+
                 />
 
             <LinearLayout
-                android:layout_width="58dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.5"
+                android:layout_weight="1.2"
                 android:gravity="bottom"
                 android:orientation="vertical">
 
@@ -409,8 +411,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="61dp"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1.5"
                 android:gravity="bottom"
                 android:orientation="vertical">
@@ -433,10 +435,10 @@
 
         <LinearLayout
             android:layout_width="300dp"
-            android:layout_weight="4"
             android:layout_height="55dp"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="14dp"
+            android:layout_weight="4"
             android:gravity="bottom"
             android:orientation="horizontal"
             android:weightSum="5">
@@ -446,8 +448,8 @@
 
                 android:id="@+id/textView2"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
                 android:text="470"
                 android:textAlignment="viewStart"
                 android:textColor="#B3B3B3"
@@ -457,7 +459,7 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.5"
+                android:layout_weight="1.2"
                 android:gravity="bottom"
                 android:orientation="vertical">
 
