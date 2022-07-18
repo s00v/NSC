@@ -44,7 +44,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     String drNumN;
 
     ContentValues cv1;
-
+    int idOilN;
 
     Cursor c;
     String tableName;
@@ -61,9 +61,12 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         Intent intent = getIntent();
 
         String oilWellNum = intent.getStringExtra("name");
+        String idOil = intent.getStringExtra("id");
+
 
         eqBreadcrumbs.setText(oilWellNum);
-
+        idOilN = Integer.parseInt(idOil);
+//        idOilN = 5;
 
         dvNameF = findViewById(R.id.dvNameF);
         dvNumF = findViewById(R.id.dvNumF);
@@ -142,9 +145,9 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     // Достаём данные из курсора
     @SuppressLint("Range")
     void logCursC(Cursor c, int i, TextView tv, List<String> tableDB) {
-
+//        int idOilN;
         if (c != null) {
-            if (c.moveToFirst()) {
+            if (c.moveToPosition(idOilN)) {
                 String str;
                 str = c.getString(c.getColumnIndex(getColumn(tableDB, i)));
                 tv.setText(str);

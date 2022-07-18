@@ -184,59 +184,71 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.lt201:
 //                intent = new Intent("201");
                 intent.putExtra("name", "201");
+                intent.putExtra("id", "1");
                 startActivity(intent);
                 break;
             case R.id.but407:
 //                intent = new Intent("407");
+                intent.putExtra("id", "2");
                 intent.putExtra("name", "407");
                 startActivity(intent);
                 break;
             case R.id.but608:
 //                intent = new Intent("407");
+                intent.putExtra("id", "3");
                 intent.putExtra("name", "608");
                 startActivity(intent);
                 break;
             case R.id.but707:
+                intent.putExtra("id", "4");
                 intent.putExtra("name", "707");
 //                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but778:
+                intent.putExtra("id", "5");
                 intent.putExtra("name", "778");
 //                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but780:
+                intent.putExtra("id", "6");
                 intent.putExtra("name", "780");
 //                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but786:
+                intent.putExtra("id", "7");
                 intent.putExtra("name", "786");
 //                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but788:
+                intent.putExtra("id", "8");
                 intent.putExtra("name", "788");
 //                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but790:
+                intent.putExtra("id", "9");
                 intent.putExtra("name", "790");
 //                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but797:
+                intent.putExtra("id", "10");
                 intent.putExtra("name", "797");
 //                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but809:
+                intent.putExtra("id", "11");
                 intent.putExtra("name", "809");
 //                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but907:
+                intent.putExtra("id", "0");
                 intent.putExtra("name", "907");
 //                intent = new Intent("407");
                 startActivity(intent);
