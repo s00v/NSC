@@ -1,9 +1,6 @@
 package com.alexsavin.nsc;
 
-import static android.view.Gravity.LEFT;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -18,8 +15,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -60,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        LinearDin = (LinearLayout) findViewById(R.id.LinearDin);
+
         linearOne = (LinearLayout) findViewById(R.id.linearOne);
 
         mDBHelper = new DatabaseHelper(getApplicationContext());
@@ -80,10 +75,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         but809 = (Button) findViewById(R.id.but809);
         but907 = (Button) findViewById(R.id.but907);
 
-//        textV = (TextView) findViewById(R.id.textV);
 
         lt201.setOnClickListener(this);
-//        but201.setOnClickListener(this);
         but407.setOnClickListener(this);
         but608.setOnClickListener(this);
         but707.setOnClickListener(this);
@@ -95,14 +88,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         but797.setOnClickListener(this);
         but809.setOnClickListener(this);
         but907.setOnClickListener(this);
-
-//        cursor = mDb.query(mDBHelper.TABLE, null, null, null, null, null, null);
-
-//        tvc = findViewById(R.id.tvc);
-
-//        logCursC(cursor);
-//        multiButtons(cursor);
-
 
 
     }
@@ -127,9 +112,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnNew = new Button(this);
         btnNew.setPadding(5, 5, 5, 5);
 
-//        btnNew.setBackgroundColor(R.color.black_grey_bgrnd);
-//        btnNew.setTextColor(R.color.grey_but_btn);
-
         btnNew.setBackgroundColor(R.color.black);
         btnNew.requestLayout();
         btnNew.setHeight(60);
@@ -141,60 +123,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNew.setOnClickListener(this);
 
         btnNew.setId(Integer.parseInt(str));
-//        Button btnnn = (Button) findViewById(R.id.(btnNew.getId()));
 
-//    LinearDin.setBackgroundColor(R.color.black);
         linearOne.setPadding(30,10,10,30);
         linearOne.addView(btnNew, lParams);
-//        LinearDin.addView(btnNew, lParams);
-//        linearOne.setLayoutParams(lParams);
+
         lParams.gravity = Gravity.CENTER_HORIZONTAL;
 
     }
-
-
-//        @SuppressLint("Range")
-//    void logCursC(Cursor c) {
-
-
-//        if (c != null) {
-//
-//            if (c.moveToFirst()) {
-//                String str = "";
-//                str = c.getString(c.getColumnIndex(mDBHelper.COLUMN_NUMBER));
-//                tvc.setText(str);
-//            }
-//        } else
-//            tvc.setText("null");
-////        return str;
-//    }
 
 
 
 
     @Override
     public void onClick(View v) {
-//Intent intent;
-
 
         Intent intent = new Intent(this, Equipment.class);
         switch (v.getId()) {
 
 
             case R.id.lt201:
-//                intent = new Intent("201");
                 intent.putExtra("name", "201");
                 intent.putExtra("id", "1");
                 startActivity(intent);
                 break;
             case R.id.but407:
-//                intent = new Intent("407");
                 intent.putExtra("id", "2");
                 intent.putExtra("name", "407");
                 startActivity(intent);
                 break;
             case R.id.but608:
-//                intent = new Intent("407");
                 intent.putExtra("id", "3");
                 intent.putExtra("name", "608");
                 startActivity(intent);
@@ -202,73 +159,55 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.but707:
                 intent.putExtra("id", "4");
                 intent.putExtra("name", "707");
-//                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but778:
                 intent.putExtra("id", "5");
                 intent.putExtra("name", "778");
-//                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but780:
                 intent.putExtra("id", "6");
                 intent.putExtra("name", "780");
-//                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but786:
                 intent.putExtra("id", "7");
                 intent.putExtra("name", "786");
-//                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but788:
                 intent.putExtra("id", "8");
                 intent.putExtra("name", "788");
-//                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but790:
                 intent.putExtra("id", "9");
                 intent.putExtra("name", "790");
-//                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but797:
                 intent.putExtra("id", "10");
                 intent.putExtra("name", "797");
-//                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but809:
                 intent.putExtra("id", "11");
                 intent.putExtra("name", "809");
-//                intent = new Intent("407");
                 startActivity(intent);
                 break;
             case R.id.but907:
                 intent.putExtra("id", "0");
                 intent.putExtra("name", "907");
-//                intent = new Intent("407");
                 startActivity(intent);
                 break;
 
         }
     }
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        mDb = mDBHelper.open();
-//
-//
-//    }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-//        Menu
+
         menu.add("menu1");
         menu.add("menu2");
         menu.add("menu3");
@@ -279,17 +218,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        Auto-generated
+
         Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
         return super.onOptionsItemSelected(item);
     }
 
-//    @Override
-//    public void onDestroy(){
-//        super.onDestroy();
-//        mDb.close();
-//
-//    }
 
 
 }

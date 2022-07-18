@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class DatabaseHelper extends SQLiteOpenHelper{
+public class DatabaseHelper extends SQLiteOpenHelper {
     private static String DB_NAME = "OilWell201.db";
     private static String DB_PATH = "";
     private static final int DB_VERSION = 2;
@@ -94,4 +94,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         if (newVersion > oldVersion)
             mNeedUpdate = true;
     }
+
+
+
 }

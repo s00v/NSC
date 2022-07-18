@@ -9,6 +9,7 @@ import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.text.Layout;
+import android.view.KeyEvent;
 import android.widget.AdapterView;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -195,9 +196,9 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     public void onDestroy(){
         super.onDestroy();
         mDb.close();
-        userCursor.close();
-        userC.close();
-        userCC.close();
+//        userCursor.close();
+//        userC.close();
+//        userCC.close();
     }
 
 
@@ -207,4 +208,31 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     public void onClick(View view) {
 
     }
+
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//
+//        //вебвью наверное всё же стоит объявить в классе в не ка локальную переменную
+////        MainActivity.goBack();
+//    }
+
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event) {
+//        if (keyCode == KeyEvent.KEYCODE_BACK) {
+//            onBackPressed();
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
+//
+//    public void onBackPressed() {
+//        Intent myIntent;
+//        myIntent = new Intent( this, MainActivity.class);
+//
+//        myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//        startActivity(myIntent);
+//        finish();
+//        return;
+//    }
+
 }
