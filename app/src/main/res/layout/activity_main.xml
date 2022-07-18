@@ -413,9 +413,13 @@
                     android:text="24.01.20"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
+
+
+
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/lt407"
             android:layout_width="300dp"
             android:layout_height="55dp"
             android:layout_marginStart="45dp"
@@ -428,11 +432,11 @@
 
             <TextView
 
-                android:id="@+id/textView2"
+                android:id="@+id/tvN407"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1.8"
-                android:text="470"
+                android:text="407"
                 android:textAlignment="viewStart"
                 android:textColor="#B3B3B3"
                 android:textSize="48sp"
@@ -446,7 +450,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/tvType407"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
@@ -455,7 +459,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/tvKvt407"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
@@ -474,7 +478,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/tvDeep407"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="658,45"
@@ -482,7 +486,163 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/tvDate407"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="24.01.20"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lt608"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="14dp"
+            android:layout_weight="4"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+
+            <TextView
+
+                android:id="@+id/tvN608"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:text="608"
+                android:textAlignment="viewStart"
+                android:textColor="#B3B3B3"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvType608"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="ШВН"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvkvt608"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="1,5кВт"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDeep608"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="658,45"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvDaye608"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="24.01.20"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lt707"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="14dp"
+            android:layout_weight="4"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+
+            <TextView
+
+                android:id="@+id/tvN707"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8"
+                android:text="707"
+                android:textAlignment="viewStart"
+                android:textColor="#B3B3B3"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.2"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvType707"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="ШВН"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvkvt707"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="1,5кВт"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvDeep707"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="658,45"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvDaye707"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24.01.20"
