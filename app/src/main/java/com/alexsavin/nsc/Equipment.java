@@ -27,6 +27,8 @@ import java.util.List;
 public class Equipment extends AppCompatActivity implements View.OnClickListener {
 
 
+    TextView eqBreadcrumbs;
+    int oilWellNum;
     Cursor userCursor;
     Cursor userC;
     Cursor userCC;
@@ -52,6 +54,15 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_equipment);
+
+        eqBreadcrumbs = findViewById(R.id.eqBreadcrumbs);
+
+        eqBreadcrumbs.setText("oilWellNum");
+        Intent intent = getIntent();
+
+        String oilWellNum = intent.getStringExtra("name");
+
+        eqBreadcrumbs.setText(oilWellNum);
 
 
         dvNameF = findViewById(R.id.dvNameF);
