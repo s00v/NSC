@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     LinearLayout LinearDin;
     LinearLayout linearOne;
-    LinearLayout lt201;
+    LinearLayout lt201, lt407, lt608, lt707;
 
     String oilWellNum;
     Cursor cursor;
@@ -63,9 +63,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mDb = mDBHelper.open();
 
         lt201 = (LinearLayout) findViewById(R.id.lt201);
-        but407 = (Button) findViewById(R.id.but407);
-        but608 = (Button) findViewById(R.id.but608);
-        but707 = (Button) findViewById(R.id.but707);
+        lt407 = (LinearLayout) findViewById(R.id.lt407);
+        lt608 = (LinearLayout) findViewById(R.id.lt608);
+        lt707 = (LinearLayout) findViewById(R.id.lt707);
         but778 = (Button) findViewById(R.id.but778);
         but780 = (Button) findViewById(R.id.but780);
         but786 = (Button) findViewById(R.id.but786);
@@ -77,9 +77,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         lt201.setOnClickListener(this);
-        but407.setOnClickListener(this);
-        but608.setOnClickListener(this);
-        but707.setOnClickListener(this);
+        lt407.setOnClickListener(this);
+        lt608.setOnClickListener(this);
+        lt707.setOnClickListener(this);
         but778.setOnClickListener(this);
         but780.setOnClickListener(this);
         but786.setOnClickListener(this);
@@ -146,17 +146,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("id", "1");
                 startActivity(intent);
                 break;
-            case R.id.but407:
+            case R.id.lt407:
                 intent.putExtra("id", "2");
                 intent.putExtra("name", "407");
                 startActivity(intent);
                 break;
-            case R.id.but608:
+            case R.id.lt608:
                 intent.putExtra("id", "3");
                 intent.putExtra("name", "608");
                 startActivity(intent);
                 break;
-            case R.id.but707:
+            case R.id.lt707:
                 intent.putExtra("id", "4");
                 intent.putExtra("name", "707");
                 startActivity(intent);
