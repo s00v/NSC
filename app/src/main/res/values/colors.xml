@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="black_grey_bgrnd">#1A1A1A</color>
+    <color name="black_grey_bgLight">#151515</color>
+    <color name="black_grey_bgrnd">#111111</color>
     <color name="grey_but_btn">#B1B1B1</color>
     <color name="grey_but_right">#000000</color>
     <color name="grey_but_common">#000000</color>
