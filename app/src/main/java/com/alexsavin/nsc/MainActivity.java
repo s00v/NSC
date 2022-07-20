@@ -26,30 +26,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     LinearLayout LinearDin;
     LinearLayout linearOne;
-    LinearLayout lt201, lt407, lt608, lt707;
+    LinearLayout lt201, lt407, lt608, lt707, lt778, lt780, lt786,lt788, lt790,lt797, lt798, lt809, lt907;
 
-    String oilWellNum;
-    Cursor cursor;
-    Button tv;
-    TextView tvc;
-
-    Button but201;
-    Button but407;
-    Button but608;
-    Button but707;
-    Button but778;
-    Button but780;
-    Button but786;
-    Button but788;
-    Button but790;
-    Button but797;
-    Button but809;
-    Button but907;
-
-    TextView textV;
-
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,28 +45,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lt407 = (LinearLayout) findViewById(R.id.lt407);
         lt608 = (LinearLayout) findViewById(R.id.lt608);
         lt707 = (LinearLayout) findViewById(R.id.lt707);
-        but778 = (Button) findViewById(R.id.but778);
-        but780 = (Button) findViewById(R.id.but780);
-        but786 = (Button) findViewById(R.id.but786);
-        but788 = (Button) findViewById(R.id.but788);
-        but790 = (Button) findViewById(R.id.but790);
-        but797 = (Button) findViewById(R.id.but797);
-        but809 = (Button) findViewById(R.id.but809);
-        but907 = (Button) findViewById(R.id.but907);
+        lt778 = (LinearLayout) findViewById(R.id.lt778);
+        lt780 = (LinearLayout) findViewById(R.id.lt780);
+        lt786 = (LinearLayout) findViewById(R.id.lt786);
+        lt788 = (LinearLayout) findViewById(R.id.lt788);
+        lt790 = (LinearLayout) findViewById(R.id.lt790);
+        lt797 = (LinearLayout) findViewById(R.id.lt797);
+        lt798 = (LinearLayout) findViewById(R.id.lt798);
+        lt809 = (LinearLayout) findViewById(R.id.lt809);
+        lt907 = (LinearLayout) findViewById(R.id.lt907);
 
 
         lt201.setOnClickListener(this);
         lt407.setOnClickListener(this);
         lt608.setOnClickListener(this);
         lt707.setOnClickListener(this);
-        but778.setOnClickListener(this);
-        but780.setOnClickListener(this);
-        but786.setOnClickListener(this);
-        but788.setOnClickListener(this);
-        but790.setOnClickListener(this);
-        but797.setOnClickListener(this);
-        but809.setOnClickListener(this);
-        but907.setOnClickListener(this);
+        lt778.setOnClickListener(this);
+        lt780.setOnClickListener(this);
+        lt786.setOnClickListener(this);
+        lt788.setOnClickListener(this);
+        lt790.setOnClickListener(this);
+        lt797.setOnClickListener(this);
+        lt798.setOnClickListener(this);
+        lt809.setOnClickListener(this);
+        lt907.setOnClickListener(this);
 
 
     }
@@ -161,42 +142,47 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra("name", "707");
                 startActivity(intent);
                 break;
-            case R.id.but778:
+            case R.id.lt778:
                 intent.putExtra("id", "5");
                 intent.putExtra("name", "778");
                 startActivity(intent);
                 break;
-            case R.id.but780:
+            case R.id.lt780:
                 intent.putExtra("id", "6");
                 intent.putExtra("name", "780");
                 startActivity(intent);
                 break;
-            case R.id.but786:
+            case R.id.lt786:
                 intent.putExtra("id", "7");
                 intent.putExtra("name", "786");
                 startActivity(intent);
                 break;
-            case R.id.but788:
+            case R.id.lt788:
                 intent.putExtra("id", "8");
                 intent.putExtra("name", "788");
                 startActivity(intent);
                 break;
-            case R.id.but790:
+            case R.id.lt790:
                 intent.putExtra("id", "9");
                 intent.putExtra("name", "790");
                 startActivity(intent);
                 break;
-            case R.id.but797:
+            case R.id.lt797:
                 intent.putExtra("id", "10");
                 intent.putExtra("name", "797");
                 startActivity(intent);
                 break;
-            case R.id.but809:
+            case R.id.lt798:
                 intent.putExtra("id", "11");
+                intent.putExtra("name", "797");
+                startActivity(intent);
+                break;
+            case R.id.lt809:
+                intent.putExtra("id", "12");
                 intent.putExtra("name", "809");
                 startActivity(intent);
                 break;
-            case R.id.but907:
+            case R.id.lt907:
                 intent.putExtra("id", "0");
                 intent.putExtra("name", "907");
                 startActivity(intent);
