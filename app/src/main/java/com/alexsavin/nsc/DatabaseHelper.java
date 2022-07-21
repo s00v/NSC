@@ -65,6 +65,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String COLUMN_ANCHORMINDIAM = "minDiametr";
     static final String COLUMN_ANCHORMAXDIAM = "maxDiametr";
 
+    static final String TABLE_RODS = "rodsComplect";
+    static final String COLUMN_RODSNAME = "rodsName";
+    static final String COLUMN_RODSQUANTITY = "quantity";
+    static final String COLUMN_RODSNOTES = "notes";
+    static final String COLUMN_RODSOILID = "oilWellID";
+
+    static final String TABLE_RODSNAME = "rodsName";
+    static final String COLUMN_RODSNAME1 = "rodsName1";
+    static final String COLUMN_RODSNAME2 = "rodsName2";
+    static final String COLUMN_RODSNAME3 = "rodsName3";
+
     private SQLiteDatabase mDatabase;
     private final Context mContext;
     private boolean mNeedUpdate = false;

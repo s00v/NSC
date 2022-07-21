@@ -48,6 +48,9 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     TextView tvElaqq11, tvElaqq12, tvElaqq13;
     TextView tvRotorMaterialE, tvRotorLengthE, tvRotorNumberE;
     TextView tvAnkerE, tvAnkerNumberE, tvAnkerMinDE, tvAnkerMaxDE;
+    TextView tvRodsNameE1, tvRodsNameE2, tvRodsNameE3;
+    TextView tvRodsQuantityE1, tvRodsQuantityE2, tvRodsQuantityE3;
+    TextView tvRodsNoteE1, tvRodsNoteE2, tvRodsNoteE3;
 
     ContentValues cv1;
     int idOilN;
@@ -99,6 +102,19 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         tvAnkerNumberE = findViewById(R.id.tvAnkerNumberE);
         tvAnkerMinDE = findViewById(R.id.tvAnkerMinDE);
         tvAnkerMaxDE = findViewById(R.id.tvAnkerMaxDE);
+
+        tvRodsNameE1 = findViewById(R.id.tvRodsNameE1);
+        tvRodsNameE2 = findViewById(R.id.tvRodsNameE2);
+        tvRodsNameE3 = findViewById(R.id.tvRodsNameE3);
+
+        tvRodsQuantityE1 = findViewById(R.id.tvRodsQuantityE1);
+        tvRodsQuantityE2 = findViewById(R.id.tvRodsQuantityE2);
+        tvRodsQuantityE3 = findViewById(R.id.tvRodsQuantityE3);
+
+        tvRodsNoteE1 = findViewById(R.id.tvRodsNoteE1);
+        tvRodsNoteE2 = findViewById(R.id.tvRodsNoteE2);
+        tvRodsNoteE3 = findViewById(R.id.tvRodsNoteE3);
+
 
         dvNameF.setText("");
 
@@ -174,14 +190,25 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     }
 
     List<String> arrayTableAnchor = new ArrayList<>();
-
     {
         arrayTableAnchor.add(mDBHelper.COLUMN_ANCHORNAME);
         arrayTableAnchor.add(mDBHelper.COLUMN_ANCHORNUMBER);
         arrayTableAnchor.add(mDBHelper.COLUMN_ANCHORMINDIAM);
         arrayTableAnchor.add(mDBHelper.COLUMN_ANCHORMAXDIAM);
-
     }
+
+    List<String> arrayTableRodsName = new ArrayList<>();
+    {
+        arrayTableRodsName.add(mDBHelper.COLUMN_RODSNAME1);
+        arrayTableRodsName.add(mDBHelper.COLUMN_RODSNAME2);
+        arrayTableRodsName.add(mDBHelper.COLUMN_RODSNAME3);
+    }
+
+
+
+
+
+
     // Метод для получения названий колонок
     public String getColumn(List<String> strCol, int i){
         return strCol.get(i);
@@ -196,7 +223,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     // Достаём данные из курсора
     @SuppressLint("Range")
     void logCursC(Cursor c, int i, TextView tv, List<String> tableDB) {
-//        int idOilN;
+
         if (c != null) {
             if (c.moveToPosition(idOilN)) {
                 String str;
@@ -206,6 +233,9 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         } else
             tv.setText("null");
     }
+
+
+
 
     @SuppressLint("Range")
     @Override
@@ -247,7 +277,11 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         logCursC(getTableDB(userCC, mDBHelper.TABLE_ANCHOR), 0, tvAnkerE, arrayTableAnchor);
         logCursC(getTableDB(userCC, mDBHelper.TABLE_ANCHOR), 1, tvAnkerNumberE, arrayTableAnchor);
         logCursC(getTableDB(userCC, mDBHelper.TABLE_ANCHOR), 2, tvAnkerMinDE, arrayTableAnchor);
-        logCursC(getTableDB(userCC, mDBHelper.TABLE_ANCHOR), 2, tvAnkerMaxDE, arrayTableAnchor);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ANCHOR), 3, tvAnkerMaxDE, arrayTableAnchor);
+
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSNAME), 0, tvRodsNameE1, arrayTableRodsName);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSNAME), 1, tvRodsNameE2, arrayTableRodsName);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSNAME), 2, tvRodsNameE3, arrayTableRodsName);
 
 
     }

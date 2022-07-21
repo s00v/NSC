@@ -787,7 +787,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="68dp"
+                android:layout_width="95dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -806,7 +806,7 @@
 
                 <TextView
                     android:id="@+id/tvRodsNameE1"
-                    android:layout_width="45dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
@@ -816,7 +816,7 @@
 
                 <TextView
                     android:id="@+id/tvRodsNameE2"
-                    android:layout_width="45dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
@@ -826,7 +826,7 @@
 
                 <TextView
                     android:id="@+id/tvRodsNameE3"
-                    android:layout_width="45dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
@@ -839,7 +839,7 @@
             <LinearLayout
                 android:layout_width="76dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="0dp"
 
                 android:orientation="vertical">
 
@@ -888,7 +888,7 @@
             <LinearLayout
                 android:layout_width="94dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="0dp"
 
                 android:orientation="vertical">
 
