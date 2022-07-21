@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     LinearLayout linearOne;
     LinearLayout lt201, lt407, lt608, lt707, lt778, lt780, lt786,lt788, lt790,lt797, lt798, lt809, lt907;
 
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,8 +113,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-
-
     @Override
     public void onClick(View v) {
 
@@ -174,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.lt798:
                 intent.putExtra("id", "11");
-                intent.putExtra("name", "797");
+                intent.putExtra("name", "798");
                 startActivity(intent);
                 break;
             case R.id.lt809:

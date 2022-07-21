@@ -44,6 +44,9 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     TextView сvCurrDriveD, cvCurrDrNumD, cvTurnD, cvTurn50D;
     String drNumN;
 
+    TextView tvPumpE, tvPumpManufE;
+    TextView tvElaqq11, tvElaqq12, tvElaqq13;
+
     ContentValues cv1;
     int idOilN;
 
@@ -78,6 +81,13 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         cvCurrDrNumD = findViewById(R.id.cvCurrDrNumD);
         cvTurnD = findViewById(R.id.cvTurnD);
         cvTurn50D = findViewById(R.id.cvTurn50D);
+
+        tvPumpE = findViewById(R.id.tvPumpE);
+        tvPumpManufE = findViewById(R.id.tvPumpManufE);
+
+        tvElaqq11 = findViewById(R.id.tvElaqq11);
+        tvElaqq12 = findViewById(R.id.tvElaqq12);
+        tvElaqq13 = findViewById(R.id.tvElaqq13);
 
         dvNameF.setText("");
 
@@ -131,6 +141,19 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         tableDrive.add(mDBHelper.COLUMN_SLAVEPULLEY);
     }
 
+    List<String> arrayTablePump = new ArrayList<>();
+    {
+        arrayTablePump.add(mDBHelper.COLUMN_PUMPMANUFACTURER);
+        arrayTablePump.add(mDBHelper.COLUMN_PUMPNAME);
+
+    }
+
+    List<String> arrayTableStator = new ArrayList<>();
+    {
+        arrayTableStator.add(mDBHelper.COLUMN_ELASTOMER);
+        arrayTableStator.add(mDBHelper.COLUMN_LENGTHSTATOR);
+        arrayTableStator.add(mDBHelper.COLUMN_NUMBERSTATOR);
+    }
 
     // Метод для получения названий колонок
     public String getColumn(List<String> strCol, int i){
@@ -182,6 +205,13 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         logCursC(getTableDB(userCC, mDBHelper.TABLE_ENGINE), 1, cvCurrDrNumD, tableDataEngine);
         logCursC(getTableDB(userCC, mDBHelper.TABLE_ENGINE), 2, cvTurnD, tableDataEngine);
         logCursC(getTableDB(userCC, mDBHelper.TABLE_ENGINE), 3, cvTurn50D, tableDataEngine);
+
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_PUMP), 0, tvPumpE, arrayTablePump);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_PUMP), 1, tvPumpManufE, arrayTablePump);
+
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_STATORCOMPLECT), 0, tvElaqq11, arrayTableStator);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_STATORCOMPLECT), 1, tvElaqq12, arrayTableStator);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_STATORCOMPLECT), 2, tvElaqq13, arrayTableStator);
 
 
     }
