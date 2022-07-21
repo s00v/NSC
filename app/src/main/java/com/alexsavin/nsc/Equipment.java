@@ -46,6 +46,8 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
 
     TextView tvPumpE, tvPumpManufE;
     TextView tvElaqq11, tvElaqq12, tvElaqq13;
+    TextView tvRotorMaterialE, tvRotorLengthE, tvRotorNumberE;
+    TextView tvAnkerE, tvAnkerNumberE, tvAnkerMinDE, tvAnkerMaxDE;
 
     ContentValues cv1;
     int idOilN;
@@ -88,6 +90,15 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         tvElaqq11 = findViewById(R.id.tvElaqq11);
         tvElaqq12 = findViewById(R.id.tvElaqq12);
         tvElaqq13 = findViewById(R.id.tvElaqq13);
+
+        tvRotorMaterialE = findViewById(R.id.tvRotorMaterialE);
+        tvRotorLengthE = findViewById(R.id.tvRotorLengthE);
+        tvRotorNumberE = findViewById(R.id.tvRotorNumberE);
+
+        tvAnkerE = findViewById(R.id.tvAnkerE);
+        tvAnkerNumberE = findViewById(R.id.tvAnkerNumberE);
+        tvAnkerMinDE = findViewById(R.id.tvAnkerMinDE);
+        tvAnkerMaxDE = findViewById(R.id.tvAnkerMaxDE);
 
         dvNameF.setText("");
 
@@ -155,6 +166,22 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         arrayTableStator.add(mDBHelper.COLUMN_NUMBERSTATOR);
     }
 
+    List<String> arrayTableRotor = new ArrayList<>();
+    {
+        arrayTableRotor.add(mDBHelper.COLUMN_ROTORMATERIAL);
+        arrayTableRotor.add(mDBHelper.COLUMN_ROTORLENGTH);
+        arrayTableRotor.add(mDBHelper.COLUMN_ROTORNUMBER);
+    }
+
+    List<String> arrayTableAnchor = new ArrayList<>();
+
+    {
+        arrayTableAnchor.add(mDBHelper.COLUMN_ANCHORNAME);
+        arrayTableAnchor.add(mDBHelper.COLUMN_ANCHORNUMBER);
+        arrayTableAnchor.add(mDBHelper.COLUMN_ANCHORMINDIAM);
+        arrayTableAnchor.add(mDBHelper.COLUMN_ANCHORMAXDIAM);
+
+    }
     // Метод для получения названий колонок
     public String getColumn(List<String> strCol, int i){
         return strCol.get(i);
@@ -212,6 +239,15 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         logCursC(getTableDB(userCC, mDBHelper.TABLE_STATORCOMPLECT), 0, tvElaqq11, arrayTableStator);
         logCursC(getTableDB(userCC, mDBHelper.TABLE_STATORCOMPLECT), 1, tvElaqq12, arrayTableStator);
         logCursC(getTableDB(userCC, mDBHelper.TABLE_STATORCOMPLECT), 2, tvElaqq13, arrayTableStator);
+
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ROTOR), 0, tvRotorMaterialE, arrayTableRotor);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ROTOR), 1, tvRotorLengthE, arrayTableRotor);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ROTOR), 2, tvRotorNumberE, arrayTableRotor);
+
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ANCHOR), 0, tvAnkerE, arrayTableAnchor);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ANCHOR), 1, tvAnkerNumberE, arrayTableAnchor);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ANCHOR), 2, tvAnkerMinDE, arrayTableAnchor);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ANCHOR), 2, tvAnkerMaxDE, arrayTableAnchor);
 
 
     }

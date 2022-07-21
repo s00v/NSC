@@ -369,9 +369,9 @@
 
                 <TextView
                     android:id="@+id/tvPumpE"
-                    android:layout_width="90dp"
+                    android:layout_width="139dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="130dp"
+                    android:layout_marginStart="110dp"
                     android:layout_marginTop="15dp"
 
                     android:text="0"
@@ -396,9 +396,9 @@
 
                 <TextView
                     android:id="@+id/tvPumpManufE"
-                    android:layout_width="100dp"
+                    android:layout_width="137dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="53dp"
+                    android:layout_marginStart="33dp"
                     android:layout_marginTop="15dp"
 
                     android:text="0"
@@ -466,7 +466,7 @@
 
                         <TextView
                             android:id="@+id/tvElaqq11"
-                            android:layout_width="45dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="000"
@@ -506,7 +506,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="74dp"
+                        android:layout_width="86dp"
                         android:layout_height="76dp"
                         android:layout_marginStart="20dp"
 
@@ -524,7 +524,7 @@
 
                         <TextView
                             android:id="@+id/tvElaqq13"
-                            android:layout_width="45dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="000"
@@ -586,7 +586,7 @@
 
                         <TextView
                             android:id="@+id/tvRotorMaterialE"
-                            android:layout_width="45dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="000"
@@ -626,7 +626,7 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="74dp"
+                        android:layout_width="86dp"
                         android:layout_height="76dp"
                         android:layout_marginStart="20dp"
 
@@ -644,7 +644,7 @@
 
                         <TextView
                             android:id="@+id/tvRotorNumberE"
-                            android:layout_width="45dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="000"

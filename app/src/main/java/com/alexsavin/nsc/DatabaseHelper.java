@@ -54,6 +54,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String COLUMN_LENGTHSTATOR = "lengthStator";
     static final String COLUMN_NUMBERSTATOR = "numberStator";
 
+    static final String TABLE_ROTOR = "rotorComplect";
+    static final String COLUMN_ROTORMATERIAL = "rotorMaterial";
+    static final String COLUMN_ROTORLENGTH = "rotorLength";
+    static final String COLUMN_ROTORNUMBER = "rotorNumber";
+
+    static final String TABLE_ANCHOR = "anchorComplect";
+    static final String COLUMN_ANCHORNAME = "anchorName";
+    static final String COLUMN_ANCHORNUMBER = "anchorNumber";
+    static final String COLUMN_ANCHORMINDIAM = "minDiametr";
+    static final String COLUMN_ANCHORMAXDIAM = "maxDiametr";
+
     private SQLiteDatabase mDatabase;
     private final Context mContext;
     private boolean mNeedUpdate = false;
