@@ -44,6 +44,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     TextView сvCurrDriveD, cvCurrDrNumD, cvTurnD, cvTurn50D;
     String drNumN;
 
+    TextView tvDateStartE, tvDeepE;
     TextView tvPumpE, tvPumpManufE;
     TextView tvElaqq11, tvElaqq12, tvElaqq13;
     TextView tvRotorMaterialE, tvRotorLengthE, tvRotorNumberE;
@@ -51,6 +52,9 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
     TextView tvRodsNameE1, tvRodsNameE2, tvRodsNameE3;
     TextView tvRodsQuantityE1, tvRodsQuantityE2, tvRodsQuantityE3;
     TextView tvRodsNoteE1, tvRodsNoteE2, tvRodsNoteE3;
+
+
+
 
     ContentValues cv1;
     int idOilN;
@@ -76,6 +80,8 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         eqBreadcrumbs.setText(oilWellNum);
         idOilN = Integer.parseInt(idOil);
 //        idOilN = 5;
+
+        tvDateStartE = findViewById(R.id.tvDateStartE);
 
         dvNameF = findViewById(R.id.dvNameF);
         dvNumF = findViewById(R.id.dvNumF);
@@ -115,6 +121,7 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         tvRodsNoteE2 = findViewById(R.id.tvRodsNoteE2);
         tvRodsNoteE3 = findViewById(R.id.tvRodsNoteE3);
 
+        tvDeepE = findViewById(R.id.tvDeepE);
 
         dvNameF.setText("");
 
@@ -204,10 +211,32 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         arrayTableRodsName.add(mDBHelper.COLUMN_RODSNAME3);
     }
 
+    List<String> arrayTableRodsQuantity = new ArrayList<>();
+    {
+        arrayTableRodsQuantity.add(mDBHelper.COLUMN_RODSQUANTITY1);
+        arrayTableRodsQuantity.add(mDBHelper.COLUMN_RODSQUANTITY2);
+        arrayTableRodsQuantity.add(mDBHelper.COLUMN_RODSQUANTITY3);
+    }
 
+    List<String> arrayTableRodsNotes = new ArrayList<>();
+    {
+        arrayTableRodsNotes.add(mDBHelper.COLUMN_RODSNOTES1);
+        arrayTableRodsNotes.add(mDBHelper.COLUMN_RODSNOTES2);
+        arrayTableRodsNotes.add(mDBHelper.COLUMN_RODSNOTES3);
+    }
 
+    List<String> arrayOilWellMain = new ArrayList<>();
+    {
+        arrayOilWellMain.add(mDBHelper.COLUMN_STARTDATA);
 
+    }
 
+    List<String> arrayTableDeep = new ArrayList<>();
+    {
+        arrayTableDeep.add(mDBHelper.COLUMN_DEEP);
+        arrayTableDeep.add(mDBHelper.COLUMN_NKTQUANTITY);
+
+    }
 
     // Метод для получения названий колонок
     public String getColumn(List<String> strCol, int i){
@@ -283,6 +312,16 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSNAME), 1, tvRodsNameE2, arrayTableRodsName);
         logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSNAME), 2, tvRodsNameE3, arrayTableRodsName);
 
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSQUANTITY), 0, tvRodsQuantityE1, arrayTableRodsQuantity);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSQUANTITY), 1, tvRodsQuantityE2, arrayTableRodsQuantity);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSQUANTITY), 2, tvRodsQuantityE3, arrayTableRodsQuantity);
+
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSNOTES), 0, tvRodsNoteE1, arrayTableRodsNotes);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSNOTES), 1, tvRodsNoteE2, arrayTableRodsNotes);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_RODSNOTES), 2, tvRodsNoteE3, arrayTableRodsNotes);
+
+        logCursC(getTableDB(userCC, mDBHelper.TABLE), 0, tvDateStartE, arrayOilWellMain);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_DEEP), 0, tvDeepE, arrayTableDeep);
 
     }
 

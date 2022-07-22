@@ -768,7 +768,7 @@
                     android:id="@+id/tvAnkerMaxDE"
                     android:layout_width="90dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="62dp"
+                    android:layout_marginStart="54dp"
                     android:layout_marginTop="15dp"
                     android:text="000"
                     android:textColor="@color/yellow_all"
@@ -1112,6 +1112,16 @@
 
 
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="319dp"
+            android:layout_height="83dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+
+            android:orientation="vertical">
 
         </LinearLayout>
 

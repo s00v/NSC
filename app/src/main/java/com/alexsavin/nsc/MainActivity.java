@@ -20,11 +20,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
+    MainButtons mainButtons;
+    Cursor cursor;
 
-    int wrapContent = LinearLayout.LayoutParams.WRAP_CONTENT;
-    int matchParent = LinearLayout.LayoutParams.MATCH_PARENT;
 
-    LinearLayout LinearDin;
     LinearLayout linearOne;
     LinearLayout lt201, lt407, lt608, lt707, lt778, lt780, lt786,lt788, lt790,lt797, lt798, lt809, lt907;
 
@@ -34,12 +33,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        linearOne = (LinearLayout) findViewById(R.id.linearOne);
-
         mDBHelper = new DatabaseHelper(getApplicationContext());
         mDBHelper.create_db();
         mDb = mDBHelper.open();
+
+
+
+//        cursor = mDb.query(mDBHelper.TABLE, null, null, null, null, null, null);
+//        mainButtons.createButtonTest();
+        linearOne = (LinearLayout) findViewById(R.id.linearOne);
+
+
 
         lt201 = (LinearLayout) findViewById(R.id.lt201);
         lt407 = (LinearLayout) findViewById(R.id.lt407);
@@ -73,44 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    void multiButtons(Cursor c){
-        if(c.moveToFirst()) {
-            do {
 
-                createButton(c);
-
-            }
-            while (c.moveToNext());
-        }
-    }
-
-    @SuppressLint({"Range", "ResourceAsColor"})
-    void createButton(Cursor c){
-
-        String str = "";
-        LinearLayout.LayoutParams lParams = new LinearLayout.LayoutParams(
-                matchParent, 200);
-        Button btnNew = new Button(this);
-        btnNew.setPadding(5, 5, 5, 5);
-
-        btnNew.setBackgroundColor(R.color.black);
-        btnNew.requestLayout();
-        btnNew.setHeight(60);
-        btnNew.setWidth(180);
-        btnNew.setTextSize(60);
-        btnNew.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
-        str = c.getString(c.getColumnIndex(mDBHelper.COLUMN_NUMBER));
-        btnNew.setText(str);
-        btnNew.setOnClickListener(this);
-
-        btnNew.setId(Integer.parseInt(str));
-
-        linearOne.setPadding(30,10,10,30);
-        linearOne.addView(btnNew, lParams);
-
-        lParams.gravity = Gravity.CENTER_HORIZONTAL;
-
-    }
 
 
     @Override

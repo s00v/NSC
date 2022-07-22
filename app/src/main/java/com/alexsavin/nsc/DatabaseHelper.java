@@ -76,6 +76,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String COLUMN_RODSNAME2 = "rodsName2";
     static final String COLUMN_RODSNAME3 = "rodsName3";
 
+    static final String TABLE_RODSQUANTITY = "rodsQuantity";
+    static final String COLUMN_RODSQUANTITY1 = "quantity1";
+    static final String COLUMN_RODSQUANTITY2 = "quantity2";
+    static final String COLUMN_RODSQUANTITY3 = "quantity3";
+
+    static final String TABLE_RODSNOTES = "rodsNotes";
+    static final String COLUMN_RODSNOTES1 = "notes1";
+    static final String COLUMN_RODSNOTES2 = "notes2";
+    static final String COLUMN_RODSNOTES3 = "notes3";
+
+    static final String TABLE_DEEP = "descentOilWell";
+    static final String COLUMN_DEEP = "deep";
+    static final String COLUMN_NKTQUANTITY = "NKTQuantity";
+
+
     private SQLiteDatabase mDatabase;
     private final Context mContext;
     private boolean mNeedUpdate = false;
