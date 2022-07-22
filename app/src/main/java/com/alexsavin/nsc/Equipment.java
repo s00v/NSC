@@ -263,8 +263,8 @@ public class Equipment extends AppCompatActivity implements View.OnClickListener
         logCursC(getTableDB(userCC, mDBHelper.TABLE_ENGINE), 2, cvTurnD, tableDataEngine);
         logCursC(getTableDB(userCC, mDBHelper.TABLE_ENGINE), 3, cvTurn50D, tableDataEngine);
 
-        logCursC(getTableDB(userCC, mDBHelper.TABLE_PUMP), 0, tvPumpE, arrayTablePump);
-        logCursC(getTableDB(userCC, mDBHelper.TABLE_PUMP), 1, tvPumpManufE, arrayTablePump);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_PUMP), 1, tvPumpE, arrayTablePump);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_PUMP), 0, tvPumpManufE, arrayTablePump);
 
         logCursC(getTableDB(userCC, mDBHelper.TABLE_STATORCOMPLECT), 0, tvElaqq11, arrayTableStator);
         logCursC(getTableDB(userCC, mDBHelper.TABLE_STATORCOMPLECT), 1, tvElaqq12, arrayTableStator);

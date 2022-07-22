@@ -25,7 +25,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:text="000"
-                android:textColor="#CACACA"
+                android:textColor="@color/yellow_all"
                 android:textSize="52sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textColor="@color/grey_but_btn"
+                        android:textColor="@color/yellow_all"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -92,7 +92,7 @@
                         android:layout_marginTop="9dp"
                         android:layout_weight="1"
                         android:text="0"
-                        android:textColor="@color/grey_but_btn"
+                        android:textColor="@color/yellow_all"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -135,7 +135,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -162,7 +162,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -189,7 +189,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -216,7 +216,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -255,7 +255,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -282,7 +282,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -309,7 +309,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -336,7 +336,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_weight="1"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -375,7 +375,7 @@
                     android:layout_marginTop="15dp"
 
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -402,7 +402,7 @@
                     android:layout_marginTop="15dp"
 
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -470,7 +470,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="000"
-                            android:textColor="@color/grey_but_btn"
+                            android:textColor="@color/yellow_all"
 
                             android:textStyle="bold" />
 
@@ -499,7 +499,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="000"
-                            android:textColor="@color/grey_but_btn"
+                            android:textColor="@color/yellow_all"
 
                             android:textStyle="bold" />
 
@@ -528,7 +528,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="000"
-                            android:textColor="@color/grey_but_btn"
+                            android:textColor="@color/yellow_all"
 
                             android:textStyle="bold" />
 
@@ -590,7 +590,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="000"
-                            android:textColor="@color/grey_but_btn"
+                            android:textColor="@color/yellow_all"
 
                             android:textStyle="bold" />
 
@@ -619,7 +619,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="000"
-                            android:textColor="@color/grey_but_btn"
+                            android:textColor="@color/yellow_all"
 
                             android:textStyle="bold" />
 
@@ -648,7 +648,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:text="000"
-                            android:textColor="@color/grey_but_btn"
+                            android:textColor="@color/yellow_all"
 
                             android:textStyle="bold" />
 
@@ -693,7 +693,7 @@
                     android:layout_marginStart="140dp"
                     android:layout_marginTop="15dp"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -719,7 +719,7 @@
                     android:layout_marginStart="83dp"
                     android:layout_marginTop="15dp"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -745,7 +745,7 @@
                     android:layout_marginStart="62dp"
                     android:layout_marginTop="15dp"
                     android:text="0"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -771,7 +771,7 @@
                     android:layout_marginStart="62dp"
                     android:layout_marginTop="15dp"
                     android:text="000"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -810,7 +810,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
 
                     android:textStyle="bold" />
 
@@ -820,7 +820,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
 
                     android:textStyle="bold" />
 
@@ -830,7 +830,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
 
                     android:textStyle="bold" />
 
@@ -859,7 +859,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
 
                     android:textStyle="bold" />
 
@@ -869,7 +869,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
 
                     android:textStyle="bold" />
 
@@ -879,7 +879,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
 
                     android:textStyle="bold" />
 
@@ -908,7 +908,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
 
                     android:textStyle="bold" />
 
@@ -918,7 +918,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
 
                     android:textStyle="bold" />
 
@@ -928,7 +928,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="000"
-                    android:textColor="@color/grey_but_btn"
+                    android:textColor="@color/yellow_all"
 
                     android:textStyle="bold" />
 
@@ -1011,8 +1011,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:text="000"
+                        android:textColor="@color/yellow_all"
                         android:textStyle="bold"
-                        android:textColor="@color/grey_but_btn"
 
                         />
 
@@ -1022,7 +1022,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="000"
-                        android:textColor="@color/grey_but_btn"
+                        android:textColor="@color/yellow_all"
 
                         android:textStyle="bold" />
 
@@ -1094,7 +1094,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:text="000"
-                        android:textColor="@color/grey_but_btn"
+                        android:textColor="@color/yellow_all"
                         android:textStyle="bold" />
 
                     <TextView
@@ -1103,7 +1103,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="000"
-                        android:textColor="@color/grey_but_btn"
+                        android:textColor="@color/yellow_all"
 
                         android:textStyle="bold" />
 
