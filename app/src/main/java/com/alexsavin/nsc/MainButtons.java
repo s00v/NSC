@@ -54,7 +54,7 @@ public class MainButtons extends DatabaseHelper implements View.OnClickListener 
         btnNew.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
         str = c.getString(c.getColumnIndex(mDBHelper.COLUMN_NUMBER));
         btnNew.setText(str);
-//        btnNew.setOnClickListener(this);
+        btnNew.setOnClickListener(this);
 
         btnNew.setId(Integer.parseInt(str));
 

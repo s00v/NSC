@@ -44,6 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     static final String COLUMN_TURNMIN = "turnoverMin";
     static final String COLUMN_TURNGC = "turnover50Gc";
     static final String COLUMN_OILID = "oilWellID";
+    static final String COLUMN_KVT = "kWt";
 
     static final String TABLE_PUMP = "pumpComplect";
     static final String COLUMN_PUMPMANUFACTURER = "pumpManufacturer";

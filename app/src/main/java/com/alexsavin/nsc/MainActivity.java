@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     LinearLayout linearOne;
     LinearLayout lt201, lt407, lt608, lt707, lt778, lt780, lt786,lt788, lt790,lt797, lt798, lt809, lt907;
     TextView tvDate907, tvDate608,tvDate201,tvDate407, tvDate707, tvDate778, tvDate780, tvDate786, tvDate788, tvDate790, tvDate797, tvDate798, tvDate809;
+    TextView tvDeep201, tvDeep407, tvDeep608, tvDeep707, tvDeep778, tvDeep780, tvDeep786, tvDeep788, tvDeep790, tvDeep797, tvDeep798, tvDeep809, tvDeep907;
+    TextView tvKvt201, tvKvt407, tvKvt608, tvKvt707, tvKvt778, tvKvt780, tvKvt786, tvKvt788, tvKvt790, tvKvt797, tvKvt798, tvKvt809, tvKvt907;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        mainButtons.createButtonTest();
 //        linearOne = (LinearLayout) findViewById(R.id.linearOne);
 
+        tvKvt201 =  findViewById(R.id.tvKvt201);
+        tvKvt407 =  findViewById(R.id.tvKvt407);
+        tvKvt608 =  findViewById(R.id.tvKvt608);
+        tvKvt707 =  findViewById(R.id.tvKvt707);
+        tvKvt778 =  findViewById(R.id.tvKvt778);
+        tvKvt780 =  findViewById(R.id.tvKvt780);
+        tvKvt786 =  findViewById(R.id.tvKvt786);
+        tvKvt788 =  findViewById(R.id.tvKvt788);
+        tvKvt790 =  findViewById(R.id.tvKvt790);
+        tvKvt797 =  findViewById(R.id.tvKvt797);
+        tvKvt798 =  findViewById(R.id.tvKvt798);
+        tvKvt809 =  findViewById(R.id.tvKvt809);
+        tvKvt907 =  findViewById(R.id.tvKvt907);
 
+        tvDeep201 =  findViewById(R.id.tvDeep201);
+        tvDeep407 =  findViewById(R.id.tvDeep407);
+        tvDeep608 =  findViewById(R.id.tvDeep608);
+        tvDeep707 =  findViewById(R.id.tvDeep707);
+        tvDeep778 =  findViewById(R.id.tvDeep778);
+        tvDeep780 =  findViewById(R.id.tvDeep780);
+        tvDeep786 =  findViewById(R.id.tvDeep786);
+        tvDeep788 =  findViewById(R.id.tvDeep788);
+        tvDeep790 =  findViewById(R.id.tvDeep790);
+        tvDeep797 =  findViewById(R.id.tvDeep797);
+        tvDeep798 =  findViewById(R.id.tvDeep798);
+        tvDeep809 =  findViewById(R.id.tvDeep809);
+        tvDeep907 =  findViewById(R.id.tvDeep907);
 
         tvDate201 =  findViewById(R.id.tvDate201);
         tvDate407 =  findViewById(R.id.tvDate407);
@@ -108,8 +136,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             arrayDateStart.add(tvDate809);
         }
 
+        List<TextView> arrayDeep = new ArrayList();
+        {
+            arrayDeep.add(tvDeep907);
+            arrayDeep.add(tvDeep201);
+            arrayDeep.add(tvDeep407);
+            arrayDeep.add(tvDeep608);
+            arrayDeep.add(tvDeep707);
+            arrayDeep.add(tvDeep778);
+            arrayDeep.add(tvDeep780);
+            arrayDeep.add(tvDeep786);
+            arrayDeep.add(tvDeep788);
+            arrayDeep.add(tvDeep790);
+            arrayDeep.add(tvDeep797);
+            arrayDeep.add(tvDeep798);
+            arrayDeep.add(tvDeep809);
+        }
+
+        List<TextView> arrayKvt = new ArrayList();
+        {
+            arrayKvt.add(tvKvt907);
+            arrayKvt.add(tvKvt201);
+            arrayKvt.add(tvKvt407);
+            arrayKvt.add(tvKvt608);
+            arrayKvt.add(tvKvt707);
+            arrayKvt.add(tvKvt778);
+            arrayKvt.add(tvKvt780);
+            arrayKvt.add(tvKvt786);
+            arrayKvt.add(tvKvt788);
+            arrayKvt.add(tvKvt790);
+            arrayKvt.add(tvKvt797);
+            arrayKvt.add(tvKvt798);
+            arrayKvt.add(tvKvt809);
+        }
+
         logCursC(getTableDB(userCC, mDBHelper.TABLE), 0, arrayDateStart, arrayOilWellMain);
-//        arrayDateStart.get(2).setText("500");
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_DEEP), 0, arrayDeep, arrayDeepDB);
+        logCursC(getTableDB(userCC, mDBHelper.TABLE_ENGINE), 0, arrayKvt, arrayKvtDB);
+
 
     }
 
@@ -226,9 +290,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     List<String> arrayOilWellMain = new ArrayList<>();
     {
         arrayOilWellMain.add(mDBHelper.COLUMN_STARTDATA);
-
     }
 
+    List<String> arrayDeepDB = new ArrayList<>();
+    {
+        arrayDeepDB.add(mDBHelper.COLUMN_DEEP);
+    }
+
+    List<String> arrayKvtDB = new ArrayList<>();
+    {
+        arrayKvtDB.add(mDBHelper.COLUMN_KVT);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

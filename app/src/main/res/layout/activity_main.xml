@@ -102,12 +102,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
-                    android:text="ШВН"
+                    android:text="ШГН"
                     android:textColor="#FFFFFF" />
 
                 <TextView
                     android:id="@+id/tvKvt786"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
                     android:text="1,5кВт"
@@ -177,7 +177,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
-                    android:text="ШВН"
+                    android:text="ШГН"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp" />
 
@@ -255,12 +255,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
-                    android:text="ШВН"
+                    android:text="ШГН"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvkvt797"
+                    android:id="@+id/tvKvt797"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
@@ -333,12 +333,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
-                    android:text="ШВН"
+                    android:text="ШГН"
                     android:textColor="#FFFFFF"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvkvt798"
+                    android:id="@+id/tvKvt798"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
@@ -608,7 +608,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvkvt608"
+                    android:id="@+id/tvKvt608"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
@@ -686,7 +686,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvkvt707"
+                    android:id="@+id/tvKvt707"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
@@ -764,7 +764,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvkvt778"
+                    android:id="@+id/tvKvt778"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
@@ -997,7 +997,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvkvt809"
+                    android:id="@+id/tvKvt809"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
@@ -1075,7 +1075,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvkvt907"
+                    android:id="@+id/tvKvt907"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
