@@ -16,17 +16,20 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private DatabaseHelper mDBHelper;
     private SQLiteDatabase mDb;
     MainButtons mainButtons;
     Cursor cursor;
-
+    Cursor userCC;
 
     LinearLayout linearOne;
     LinearLayout lt201, lt407, lt608, lt707, lt778, lt780, lt786,lt788, lt790,lt797, lt798, lt809, lt907;
-
+    TextView tvDate907, tvDate608,tvDate201,tvDate407, tvDate707, tvDate778, tvDate780, tvDate786, tvDate788, tvDate790, tvDate797, tvDate798, tvDate809;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +44,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 //        cursor = mDb.query(mDBHelper.TABLE, null, null, null, null, null, null);
 //        mainButtons.createButtonTest();
-        linearOne = (LinearLayout) findViewById(R.id.linearOne);
+//        linearOne = (LinearLayout) findViewById(R.id.linearOne);
 
 
+
+        tvDate201 =  findViewById(R.id.tvDate201);
+        tvDate407 =  findViewById(R.id.tvDate407);
+        tvDate608 =  findViewById(R.id.tvDate608);
+        tvDate707 =  findViewById(R.id.tvDate707);
+        tvDate778 =  findViewById(R.id.tvDate778);
+        tvDate780 =  findViewById(R.id.tvDate780);
+        tvDate786 =  findViewById(R.id.tvDate786);
+        tvDate788 =  findViewById(R.id.tvDate788);
+        tvDate790 =  findViewById(R.id.tvDate790);
+        tvDate797 =  findViewById(R.id.tvDate797);
+        tvDate798 =  findViewById(R.id.tvDate798);
+        tvDate809 =  findViewById(R.id.tvDate809);
+        tvDate907 =  findViewById(R.id.tvDate907);
 
         lt201 = (LinearLayout) findViewById(R.id.lt201);
         lt407 = (LinearLayout) findViewById(R.id.lt407);
@@ -74,6 +91,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lt809.setOnClickListener(this);
         lt907.setOnClickListener(this);
 
+        List<TextView> arrayDateStart = new ArrayList();
+        {
+            arrayDateStart.add(tvDate907);
+            arrayDateStart.add(tvDate201);
+            arrayDateStart.add(tvDate407);
+            arrayDateStart.add(tvDate608);
+            arrayDateStart.add(tvDate707);
+            arrayDateStart.add(tvDate778);
+            arrayDateStart.add(tvDate780);
+            arrayDateStart.add(tvDate786);
+            arrayDateStart.add(tvDate788);
+            arrayDateStart.add(tvDate790);
+            arrayDateStart.add(tvDate797);
+            arrayDateStart.add(tvDate798);
+            arrayDateStart.add(tvDate809);
+        }
+
+        logCursC(getTableDB(userCC, mDBHelper.TABLE), 0, arrayDateStart, arrayOilWellMain);
+//        arrayDateStart.get(2).setText("500");
 
     }
 
@@ -156,6 +192,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    // Метод для получения названий колонок
+    public String getColumn(List<String> strCol, int i){
+        return strCol.get(i);
+    }
+
+    public Cursor getTableDB(Cursor c, String tableName){
+        c = mDb.query(tableName, null, null, null, null, null, null);
+        return c;
+    }
+
+    // Достаём данные из курсора
+    @SuppressLint("Range")
+    void logCursC(Cursor c, int i, List<TextView> tv, List<String> tableDB) {
+
+        if (c != null) {
+            if (c.moveToFirst()) {
+                int x = 0;
+                String str;
+                do{
+
+
+                str = c.getString(c.getColumnIndex(getColumn(tableDB, i)));
+
+                tv.get(x).setText(str);
+                x++;
+                }while(c.moveToNext());
+            }
+        } else
+            tv.get(0).setText("null");
+    }
+
+    List<String> arrayOilWellMain = new ArrayList<>();
+    {
+        arrayOilWellMain.add(mDBHelper.COLUMN_STARTDATA);
+
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
 
@@ -174,6 +248,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
-
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        mDb.close();
+//        userCursor.close();
+//        userC.close();
+//        userCC.close();
+    }
 
 }

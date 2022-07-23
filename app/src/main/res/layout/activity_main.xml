@@ -287,7 +287,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvDaye797"
+                    android:id="@+id/tvDate797"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24.01.20"
@@ -365,7 +365,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvDaye798"
+                    android:id="@+id/tvDate798"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24.01.20"
@@ -635,7 +635,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvDaye608"
+                    android:id="@+id/tvDate608"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24.01.20"
@@ -713,7 +713,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvDaye707"
+                    android:id="@+id/tvDate707"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24.01.20"
@@ -791,7 +791,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvDaye778"
+                    android:id="@+id/tvDate778"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24.01.20"
@@ -1024,7 +1024,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvDaye809"
+                    android:id="@+id/tvDate809"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24.01.20"
@@ -1102,7 +1102,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvDaye907"
+                    android:id="@+id/tvDate907"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="24.01.20"
